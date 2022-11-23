@@ -23,7 +23,7 @@ export default class AdminStudents extends Component {
 
   async updateTable() {
     axios
-      .get("http://localhost:5000/debug/users")
+      .get("http://localhost:5500/debug/users")
       .then((res) => {
         this.setState({
           data: res.data,
@@ -36,7 +36,7 @@ export default class AdminStudents extends Component {
   onDelete(_id) {
     console.log("Deleting tarik: " + _id);
     axios
-      .post("http://localhost:5000/debug/delete", { _id: _id })
+      .post("http://localhost:5500/debug/delete", { _id: _id })
       .then((res) => {
         console.log(res);
         window.location.reload();

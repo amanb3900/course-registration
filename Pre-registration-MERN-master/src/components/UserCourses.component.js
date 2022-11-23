@@ -29,7 +29,7 @@ export default class UserCourses extends Component {
 
   async updateTable() {
     const response = await fetch(
-      "http://localhost:5000/courses?page=" +
+      "http://localhost:5500/courses?page=" +
         this.state.page +
         "&token=" +
         Cookie.get("token") +
@@ -68,7 +68,7 @@ export default class UserCourses extends Component {
     };
     axios
       .post(
-        "http://localhost:5000/users/setUserCourses?token=" +
+        "http://localhost:5500/users/setUserCourses?token=" +
           Cookie.get("token") +
           "&userId=" +
           Cookie.get("userId"),

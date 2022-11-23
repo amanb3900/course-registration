@@ -26,6 +26,7 @@ router.route("/").get(auth, (req, res) => {
 
 /*only teacher/admin should be able to access to this endpoint.*/
 router.route("/add").post((req, res) => {
+  console.log(req.body.course_name);
   addCourse(
     req.body.course_id,
     req.body.course_name,
@@ -61,7 +62,7 @@ async function addCourse(
     UpdatedDate: UpdatedDate,
     Url: Url,
   });
-
+  console.log(course);
   try {
     await course.save();
   } catch (error) {

@@ -40,7 +40,7 @@ export default class Courses extends Component {
   getCurrentUserCourse() {
     axios
       .get(
-        "http://localhost:5000/users/userCourse?token=" +
+        "http://localhost:5500/users/userCourse?token=" +
           Cookie.get("token") +
           "&userId=" +
           Cookie.get("userId")
@@ -50,12 +50,12 @@ export default class Courses extends Component {
           userCourse: res.data[0].courses,
         });
       })
-      .catch((err) => alert("Error: " + err));
+      .catch((err) => console.log(err));
   }
 
   async updateTable() {
     const response = await fetch(
-      "http://localhost:5000/courses?page=" +
+      "http://localhost:5500/courses?page=" +
         this.state.page +
         "&token=" +
         Cookie.get("token") +
@@ -79,7 +79,7 @@ export default class Courses extends Component {
     console.log(course);
     axios
       .post(
-        "http://localhost:5000/users/addCourse?token=" +
+        "http://localhost:5500/users/addCourse?token=" +
           Cookie.get("token") +
           "&userId=" +
           Cookie.get("userId"),
@@ -88,7 +88,7 @@ export default class Courses extends Component {
       .then((res) => {
         console.log("Success");
       })
-      .catch((err) => alert("Error: " + err));
+      .catch((err) => console.log(err));
   }
 
   // Search impelmentation
@@ -108,7 +108,7 @@ export default class Courses extends Component {
 
     axios
       .get(
-        "http://localhost:5000/courses/search?value=" +
+        "http://localhost:5500/courses/search?value=" +
           e.target.value +
           "&token=" +
           Cookie.get("token") +
@@ -121,7 +121,7 @@ export default class Courses extends Component {
         this.setState({ data: res.data });
       })
       .catch((err) => {
-        alert("Error: " + err);
+        console.log(err);
       });
   }
 
@@ -183,48 +183,49 @@ export default class Courses extends Component {
                 <td>Prerequisites</td>
                 <td>Option</td>
               </tr>
-              {this.state.data.map((item, i) => {
-                return (
-                  <tr
-                    key={i}
-                    style={
-                      this.state.userCourse.includes(item._id) > 0
-                        ? { display: "none" }
-                        : { background: "#353131" }
-                    }
-                  >
-                    <td className="title">{item.course_id}</td>
-                    <td>
-                      <a
-                        className="ecampus"
-                        href={"https://ecampus.ius.edu.ba/" + item.Url}
-                      >
-                        {item.course_name}
-                      </a>
-                    </td>
-                    <td>{item.Lecturer}</td>
-                    <td>{item.AcademicUnit}</td>
-                    <td>
-                      {item.prerequisite.map((item) => {
-                        return item + " ";
-                      })}
-                    </td>
-                    <td>
-                      <div className="button">
-                        <form>
-                          <button
-                            id="work"
-                            className="courseBtn"
-                            onClick={() => this.onAddItem(item._id)}
-                          >
-                            Add Course
-                          </button>
-                        </form>
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })}
+              {this.state.data &&
+                this.state.data.map((item, i) => {
+                  return (
+                    <tr
+                      key={i}
+                      style={
+                        this.state.userCourse.includes(item._id) > 0
+                          ? { display: "none" }
+                          : { background: "#353131" }
+                      }
+                    >
+                      <td className="title">{item.course_id}</td>
+                      <td>
+                        <a
+                          className="ecampus"
+                          href={"https://ecampus.ius.edu.ba/" + item.Url}
+                        >
+                          {item.course_name}
+                        </a>
+                      </td>
+                      <td>{item.Lecturer}</td>
+                      <td>{item.AcademicUnit}</td>
+                      <td>
+                        {item.prerequisite.map((item) => {
+                          return item + " ";
+                        })}
+                      </td>
+                      <td>
+                        <div className="button">
+                          <form>
+                            <button
+                              id="work"
+                              className="courseBtn"
+                              onClick={() => this.onAddItem(item._id)}
+                            >
+                              Add Course
+                            </button>
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
             </tbody>
           </table>
         </div>

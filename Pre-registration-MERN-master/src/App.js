@@ -17,6 +17,7 @@ import AdminStudents from "./components/AdminStudents.component";
 import AdminStatistics from "./components/AdminStatistics.component";
 import AdminStatisticsEx from "./components/AdminStatisticsEx.component";
 import AdminNavigation from "./components/AdminNavigation.component";
+import AdminAddCourse from "./components/AdminAddCourse.component";
 
 function App() {
   return (
@@ -69,6 +70,10 @@ function App() {
           <Route exact path="/AdminStatisticsEx">
             <AdminNavigation />
             <AdminStatisticsEx />
+          </Route>
+          <Route exact path="/addCourse">
+            <AdminNavigation />
+            <AdminAddCourse />
           </Route>
         </div>
       </Switch>

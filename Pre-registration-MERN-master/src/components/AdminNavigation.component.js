@@ -30,7 +30,7 @@ export default class AdminNavigation extends Component {
     }
 
     const response = await fetch(
-      "http://localhost:5000/users/auth?token=" +
+      "http://localhost:5500/users/auth?token=" +
         Cookie.get("token") +
         "&userId=" +
         Cookie.get("userId")
@@ -44,7 +44,7 @@ export default class AdminNavigation extends Component {
     e.preventDefault();
     axios
       .get(
-        "http://localhost:5000/users/logout?token=" +
+        "http://localhost:5500/users/logout?token=" +
           Cookie.get("token") +
           "&userId=" +
           Cookie.get("userId")

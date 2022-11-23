@@ -44,7 +44,7 @@ export default class Login extends Component {
     };
 
     axios
-      .post("http://localhost:5000/users/login", user)
+      .post("http://localhost:5500/users/login", user)
       .then((res) => {
         console.log(res.data);
         Cookie.set("token", res.data.token);
@@ -64,7 +64,6 @@ export default class Login extends Component {
         }
       })
       .catch((err) => {
-        
         Cookie.remove("token");
         Cookie.remove("userId");
 

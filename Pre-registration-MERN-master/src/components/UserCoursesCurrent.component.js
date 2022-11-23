@@ -28,7 +28,7 @@ export default class UserCoursesCurrect extends Component {
   async updateTable() {
     axios
       .get(
-        "http://localhost:5000/users/userCourse?token=" +
+        "http://localhost:5500/users/userCourse?token=" +
           Cookie.get("token") +
           "&userId=" +
           Cookie.get("userId")
@@ -45,7 +45,7 @@ export default class UserCoursesCurrect extends Component {
     console.log("Deleting courseId: " + e);
     axios
       .post(
-        "http://localhost:5000/users/removeCourse?courseId=" +
+        "http://localhost:5500/users/removeCourse?courseId=" +
           e +
           "&token=" +
           Cookie.get("token") +

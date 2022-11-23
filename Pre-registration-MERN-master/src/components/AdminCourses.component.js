@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "../css/style.css";
 import axios from "axios";
 import Cookie from "js-cookie";
@@ -40,7 +41,7 @@ export default class Courses extends Component {
   getCurrentUserCourse() {
     axios
       .get(
-        "http://localhost:5000/users/userCourse?token=" +
+        "http://localhost:5500/users/userCourse?token=" +
           Cookie.get("token") +
           "&userId=" +
           Cookie.get("userId")
@@ -55,7 +56,7 @@ export default class Courses extends Component {
 
   async updateTable() {
     const response = await fetch(
-      "http://localhost:5000/courses?page=" +
+      "http://localhost:5500/courses?page=" +
         this.state.page +
         "&token=" +
         Cookie.get("token") +
@@ -79,7 +80,7 @@ export default class Courses extends Component {
     console.log(course);
     axios
       .post(
-        "http://localhost:5000/users/addCourse?token=" +
+        "http://localhost:5500/users/addCourse?token=" +
           Cookie.get("token") +
           "&userId=" +
           Cookie.get("userId"),
@@ -108,7 +109,7 @@ export default class Courses extends Component {
 
     axios
       .get(
-        "http://localhost:5000/courses/search?value=" +
+        "http://localhost:5500/courses/search?value=" +
           e.target.value +
           "&token=" +
           Cookie.get("token") +
@@ -162,6 +163,7 @@ export default class Courses extends Component {
             </a>
           </div>
         </div>
+        <Link to="/addCourse">Add Course</Link>
         <div className="allCourses" id="allCourses">
           <table className="courses">
             <tbody>
