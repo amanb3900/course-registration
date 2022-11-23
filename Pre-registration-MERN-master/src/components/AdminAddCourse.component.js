@@ -30,7 +30,7 @@ const AdminAddCourse = () => {
 
   return (
     <div>
-      <h1>Admin Add Course</h1>
+      <h1 >Admin Add Course</h1>
       <form>
         <div className="form-group">
           <label>Course ID</label>

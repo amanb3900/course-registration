@@ -38,7 +38,7 @@ export default class UserCoursesCurrect extends Component {
           data: res.data[0].information,
         });
       })
-      .catch((err) => alert("Error: " + err));
+      .catch((err) => console.log("Error: " + err));
   }
 
   onDelete(e) {

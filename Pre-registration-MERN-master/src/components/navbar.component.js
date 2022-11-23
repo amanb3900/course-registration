@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../css/style.css";
-import Logo from "../img/IUSlogo2.png";
+import Logo from "../img/lnmiit.png";
 import Cookie from "js-cookie";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
@@ -68,10 +68,7 @@ export default class Navigation extends Component {
       <nav className="navigation">
         <div className="logo">
           <img className="ius" src={Logo} />
-          <span
-            className="user"
-            dangerouslySetInnerHTML={{ __html: this.state.fullName }}
-          ></span>
+          
         </div>
         <div className="upButtons">
           <div className="links">

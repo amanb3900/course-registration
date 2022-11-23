@@ -51,7 +51,7 @@ export default class Courses extends Component {
           userCourse: res.data[0].courses,
         });
       })
-      .catch((err) => alert("Error: " + err));
+      .catch((err) => console.log("Error: " + err));
   }
 
   async updateTable() {
@@ -89,7 +89,7 @@ export default class Courses extends Component {
       .then((res) => {
         console.log("Success");
       })
-      .catch((err) => alert("Error: " + err));
+      .catch((err) => console.log("Error: " + err));
   }
 
   // Search impelmentation
@@ -122,7 +122,7 @@ export default class Courses extends Component {
         this.setState({ data: res.data });
       })
       .catch((err) => {
-        alert("Error: " + err);
+        console.log("Error: " + err);
       });
   }
 

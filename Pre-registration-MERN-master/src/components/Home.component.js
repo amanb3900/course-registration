@@ -21,15 +21,15 @@ export default class Home extends Component {
           <div className="line2"></div>
           <div className="line3"></div>
         </div>
-        <h1>IUS Pre-Registration system</h1>
+        <h1>LNMIIT Course Registration</h1>
         <div className="developers">
           <h2>Developed by:</h2>
           <p className="devP">
-            <span>Adem Dugalić,</span>
-            <span>Axel Stefanini,</span>
-            <span>Lejla Mujakić,</span>
-            <span>Tarik Muharem,</span>
-            <span>Zinedin Hadžajlija</span>
+            <span>Sumit Arora,</span>
+            <span>Aman Bansal,</span>
+            <span>Bharat Bansal,</span>
+            <span>Shresth Jain,</span>
+            <span>Sanskar Pansari</span>
           </p>
         </div>
       </div>

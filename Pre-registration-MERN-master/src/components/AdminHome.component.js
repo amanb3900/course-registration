@@ -15,7 +15,7 @@ export default class AdminHome extends Component {
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
-        <h1>IUS Pre-Registration system</h1>
+        <h1>LNMIIT - Course Registration</h1>
         <div class="developers">
           <h2>Developed by:</h2>
           <p class="devP">

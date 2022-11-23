@@ -163,8 +163,6 @@ export default class Courses extends Component {
             <a className="blueBorder" href="addCourses.html">
               All courses
             </a>
-            <a href="mandatoryCourses.html">Mandatory courses</a>
-            <a href="electiveCourses.html">Elective courses</a>
           </div>
         </div>
         <div className="allCourses" id="allCourses">

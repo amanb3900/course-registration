@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Logo from "../img/IUSlogo2.png";
+import Logo from "../img/lnmiit.png";
 import Cookie from "js-cookie";
 import "../css/style.css";
 import "../css/main.css";

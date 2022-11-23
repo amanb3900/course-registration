@@ -12,7 +12,6 @@ const UserSchema = new Schema({
     program: {type: String, required: false},
     semester: {type: Number, required:false},
     password: {type: String, required: true},
-    email: {type: String, required: false, unique: true},
     isAdmin: {type: Boolean, default:false},
     isDeleted: {type: Boolean,default:false}
     },

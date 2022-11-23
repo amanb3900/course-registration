@@ -51,16 +51,16 @@ router.route("/userImport").post((req, res) => {
     });
 });
 
-router.route("/signup").post((req, res) => {
-  console.log("hello", req.body.userID)
-  User.findOne({ userID: req.body.userID }).then((user) => {
-    if (user) {
-      return res.status(404).json({
-        message: "User  found!",
-        error: new Error("User  found!"),
-      });
-    } else {
-      // user.password = 
+router.route("/signup").post( async (req, res) => {
+  const user = await User.find({ userID: req.body.userID })
+  console.log("size", user.length);
+    // if (user.length  != 0) {
+    //   return res.status(404).json({
+    //     message: "User  found!",
+    //     error: new Error("User  found!"),
+    //   });
+    // }
+
       const password = generateHash(req.body.password);
       const user1 = new User({
         password: password,
@@ -75,12 +75,11 @@ router.route("/signup").post((req, res) => {
           });
         })
         .catch((error) => {
+          console.log(error);
           res.status(500).json({
             error: error,
           });
         });
-    }
-  });
 });
 
 router.route("/login").post((req, res) => {
