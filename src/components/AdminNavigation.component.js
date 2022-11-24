@@ -84,9 +84,9 @@ export default class AdminNavigation extends Component {
             <Link id="AddCourses" to="/AdminStudents">
               <span data-hover="AddCourses">Students</span>
             </Link>
-            <Link id="Schedule" to="/AdminStatistics">
+            {/* <Link id="Schedule" to="/AdminStatistics">
               <span data-hover="Schedule">Statistics</span>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="downButtons">
