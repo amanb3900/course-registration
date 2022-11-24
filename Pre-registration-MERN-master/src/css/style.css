@@ -1,0 +1,963 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(Montserrat-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,
+body,
+#root {
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  min-height: 720px;
+  min-width: 1270px;
+  max-height: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+Link {
+  text-decoration: none;
+}
+
+/*Scroll*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(95, 91, 91, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Main */
+
+.outerWrapper {
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/banner1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  display: flex;
+  background-color: rgb(95, 91, 91, 0.8);
+}
+
+/*############################################# Navigation ####################################################*/
+
+.navigation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 12%;
+  background: #292626;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #fff;
+}
+
+/* Blue logo */
+
+.navigation .logo {
+  margin-top: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 15%;
+  background: rgb(6, 125, 233);
+  background: linear-gradient(
+    90deg,
+    rgba(6, 125, 233, 0.9110994739692753) 0%,
+    rgba(1, 169, 250, 0.9251050762101716) 100%
+  );
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* Links div */
+.navigation .links {
+  display: flex;
+  flex-direction: column;
+}
+/* Links */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.navigation .links a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #fff;
+  animation-duration: 1.5s;
+  transition-timing-function: ease-in;
+  animation-name: fadeIn;
+}
+
+/* simple divider div if needed */
+.navigation .divider {
+  min-height: 100px;
+}
+/* all upper links */
+.navigation .upButtons {
+  text-align: left;
+  width: 80%;
+  height: 45%;
+}
+
+/* all down links */
+.navigation .downButtons {
+  border-top: 1px solid #444444;
+  width: 80%;
+  padding-top: 5%;
+}
+/* ###### */
+.navigation .logo .ius {
+  margin-bottom: 10px;
+  width: 50px;
+  height: auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* ###### */
+.user {
+  font-size: 0.9em;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  animation-duration: 0.3s;
+  transition-timing-function: ease-in;
+  animation-name: fadeIn;
+}
+
+/* ###### */
+.LogOut {
+  padding-left: 15px;
+  padding-right: 15px;
+  animation-duration: 0.3s;
+  transition-timing-function: ease-in;
+  animation-name: fadeIn;
+}
+
+.LogOut button {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ============================
+        Desktop Responsiveness
+              for menu
+   ============================*/
+
+@media screen and (max-width: 1500px) {
+  .navigation .links a {
+    font-size: 0.7em;
+  }
+  .user {
+    font-size: 0.7em;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 2;
+  display: none;
+  cursor: pointer;
+}
+
+.menu div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+/* Home */
+
+.home {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bluePart {
+  position: relative;
+  width: 100%;
+  height: 6%;
+  top: 8%;
+  background: rgb(6, 125, 233);
+  background: linear-gradient(
+    90deg,
+    rgba(6, 125, 233, 0.9110994739692753) 100%,
+    rgba(1, 169, 250, 0.9251050762101716) 0%
+  );
+}
+
+.home h1 {
+  position: relative;
+  font-family: "Montserrat", cursive;
+  text-transform: uppercase;
+  font-size: 3em;
+  color: #fff;
+}
+.home .developers {
+  margin-top: 10%;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.home .developers .devP {
+  font-size: 1em;
+  color: #fff;
+}
+
+/* #### responsivnes for home #####*/
+
+@media screen and (max-width: 1500px) {
+  .home h1 {
+    font-size: 2em;
+  }
+  .home .developers .devP {
+    font-size: 0.8em;
+  }
+}
+
+/* ============================
+				Mobile Responsiveness
+              for menu
+   ============================*/
+
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    min-width: 300px;
+    min-height: 300px;
+    overflow-x: hidden;
+  }
+  .navigation .logo {
+    margin-top: 5%;
+    height: 20%;
+  }
+  .wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .navigation {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    animation-duration: 0.5s;
+    transition-timing-function: ease-in;
+    animation-name: Fade;
+  }
+  .navigation .links a {
+    font-size: 1em;
+  }
+  .user {
+    font-size: 1em;
+  }
+
+  .home {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .home h1 {
+    font-size: 2em;
+  }
+
+  @keyframes Fade {
+    from {
+      transform: translateX(-50px);
+    }
+    to {
+      transform: translateX(0px);
+    }
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Schedule */
+
+.schedule {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.gridSchedule {
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.card {
+  /*background-color: dodgerblue;*/
+  position: relative;
+  color: white;
+  padding: 0.5rem;
+  height: 6rem;
+}
+
+.day {
+  background-color: rgb(6, 125, 233);
+  width: 100%;
+  top: 50%;
+  transform: translate(0, 30%);
+  height: 60%;
+  padding-top: 5%;
+}
+
+.event {
+  flex: 0 0 auto;
+  font-size: 13px;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  line-height: 14px;
+  background: #e4f2f2;
+  border: 1px solid #b5dbdc;
+  color: #009aaf;
+  text-decoration: none;
+}
+
+.event-desc {
+  color: #666;
+  margin: 3px 0 7px 0;
+  text-decoration: none;
+}
+
+/* ============================
+				Mobile Responsiveness
+   ============================*/
+@media (max-width: 768px) {
+  .gridSchedule {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* My courses */
+
+.myCourses {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.upperNav {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.5%;
+  background-color: #353131;
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  width: 40%;
+}
+
+.search form {
+  position: relative;
+  width: 100%;
+}
+
+.search form input {
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 100%;
+  height: 80%;
+}
+
+.search button {
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 40px;
+  height: 79%;
+  align-items: center;
+  border: none;
+  background: rgb(6, 125, 233);
+  background: linear-gradient(
+    90deg,
+    rgba(6, 125, 233, 0.9110994739692753) 100%,
+    rgba(1, 169, 250, 0.9251050762101716) 0%
+  );
+}
+.search button img {
+  margin-top: 3px;
+  position: relative;
+  width: 25px;
+  height: auto;
+}
+
+.prevNext {
+  position: absolute;
+  right: 0;
+  width: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.prevNext button {
+  background: transparent;
+  margin-top: 15%;
+  border: none;
+  color: #9999;
+  font-size: 1em;
+}
+
+/* Down nav */
+
+.downNav {
+  position: relative;
+  top: 5px;
+  left: 50%;
+  transform: translate(-40%, 0%);
+  width: 70%;
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.downNav .passedCurrent {
+  position: relative;
+  margin-left: 10%;
+  width: 60%;
+  border-bottom: 1px solid #292626;
+}
+
+.downNav .passedCurrent a {
+  position: relative;
+  font-size: 0.9em;
+  margin-left: 10px;
+  top: 15%;
+  height: 75%;
+  color: white;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.downNav .passedCurrent a:hover {
+  color: #000;
+}
+
+#passedC {
+  border-bottom: 2px solid rgb(6, 125, 233);
+}
+
+.addMore {
+  position: relative;
+}
+
+.addMore button {
+  background: rgb(6, 125, 233);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 0.8;
+}
+
+/*Tables*/
+
+.passedCourses {
+  margin-top: 10px;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 5%;
+}
+
+.semester {
+  box-sizing: border-box;
+  margin-top: 10px;
+  width: 70%;
+  text-align: center;
+  background: #353131;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.semesterNum {
+  text-align: center;
+  background: rgb(6, 125, 233);
+}
+
+.info {
+  background: #292626;
+}
+
+.semester td,
+.semester th {
+  padding: 10px;
+  border-bottom: 1px solid #292626;
+}
+
+.ecampus {
+  text-decoration: none;
+  color: rgb(6, 125, 233);
+}
+
+@media (max-width: 768px) {
+  .upperNav {
+    min-height: 50px;
+  }
+  .search {
+    width: 70%;
+  }
+  .prevNext {
+    display: none;
+  }
+  .downNav {
+    width: 100%;
+    top: 0;
+    min-height: 30px;
+  }
+  .downNav .passedCurrent a {
+    font-size: 0.8em;
+    margin-left: 5px;
+  }
+  .passedCourses {
+  }
+  .semester {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 0.6em;
+  }
+}
+
+/*Add courses*/
+
+.addCourses {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.addCoursesDownNav {
+  position: relative;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%, 00%);
+  width: 60%;
+  height: 7%;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+.addCoursesDownNav .typeOfCourses {
+  position: relative;
+  border-bottom: 1px solid #292626;
+}
+
+#marginZero {
+  margin: 0;
+}
+
+.addCoursesDownNav .typeOfCourses a {
+  position: relative;
+  font-size: 0.9em;
+  margin-left: 10px;
+  top: 15%;
+  height: 75%;
+  color: white;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.addCoursesDownNav .typeOfCourses a:hover {
+  color: #000;
+}
+
+.typeOfCourses a {
+  text-decoration: none;
+}
+
+.typeOfCourses .blueBorder {
+  border-bottom: 2px solid rgb(6, 125, 233);
+}
+
+.button button {
+  color: #fff;
+  border: none;
+  padding: 5px;
+  font-size: 13.33px;
+}
+
+.courseBtn {
+  background: rgb(6, 125, 233);
+}
+
+.courseBtn:active {
+  background: #292626;
+}
+
+.courseBtn:focus,
+.courseBtn:visited {
+  background: #353131;
+}
+
+.allCourses,
+.mandatoryCourses,
+.electiveCourses {
+  margin-top: 10px;
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 5%;
+}
+
+.buttonAbove {
+  width: 100%;
+}
+
+#coursesBtn {
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  left: 15%;
+  background-color: rgb(6, 125, 233);
+}
+
+.courses {
+  box-sizing: border-box;
+  margin-top: 10px;
+  width: 70%;
+  text-align: center;
+  background: #353131;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.thead {
+  text-align: center;
+  background: rgb(6, 125, 233);
+}
+
+.info {
+  background: #292626;
+}
+
+.courses td,
+.courses th {
+  padding: 10px;
+  border-bottom: 1px solid #292626;
+}
+
+/*Responsive*/
+
+@media (max-width: 40em) {
+  .courses tbody th {
+    margin-top: 0;
+    text-align: left;
+  }
+
+  .title {
+    display: block;
+    font-size: 1.2em;
+    line-height: 110%;
+    padding: 0.5em 0.5em;
+    background-color: #292626;
+    color: rgb(6, 125, 233);
+  }
+
+  .button {
+    align-items: center;
+  }
+  .info {
+    display: none;
+  }
+
+  .courses td,
+  .courses th {
+    min-width: 20%;
+    font-weight: bold;
+  }
+}
+@media (min-width: 40em) {
+  .courses td,
+  .courses th,
+  .courses tbody th,
+  .courses tbody td,
+  .courses thead td,
+  .courses thead th {
+    display: table-cell;
+    margin: 0;
+  }
+}
+
+@media (max-width: 40em) {
+  .courses td,
+  .courses th {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    clear: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .search {
+    width: 70%;
+  }
+  .prevNext {
+    display: none;
+  }
+  .addCoursesDownNav {
+    width: 100%;
+  }
+  .addCoursesDownNav .typeOfCourses a {
+    font-size: 0.8em;
+    margin-left: 5px;
+  }
+
+  .courses {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 0.6em;
+  }
+}
+
+@media screen and (max-width: 1000px, min-width: 500px) {
+  .allCourses {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 0.6em;
+    align-items: normal;
+    padding-left: 7%;
+  }
+}
+
+/* Admin statistics */
+
+.Statistics {
+  margin-top: 10px;
+  padding-top: 2%;
+  position: relative;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 5%;
+}
+
+.cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+}
+
+.courseCard {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 50%;
+  background-color: #292626;
+}
+
+.courseCard span {
+  position: relative;
+  top: 25%;
+  width: 33%;
+  height: 20px;
+  padding: 5px;
+  color: white;
+}
+
+#Border {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+}
+
+.leftBorder {
+  border-left: 1px solid gray;
+}
+
+.courseCard:hover {
+  background-color: rgb(6, 125, 233);
+}
+
+/* Statistics Ex */
+
+.StatisticsEx {
+  margin-top: 10px;
+  padding-top: 2%;
+  position: relative;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 5%;
+}
+
+.courseDetails {
+  position: relative;
+  width: 80%;
+  height: 90%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  /*border: 1px solid #292626;*/
+  color: #fff;
+  display: flex;
+}
+
+.courseDetails .info {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.courseDetails .info .innerInfo {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.courseDetails .info .innerInfo .data {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+}
+
+.courseDetails .description {
+  position: relative;
+  width: 50%;
+  background-color: rgb(6, 125, 233);
+}
+
+.courseDetails .description h2 {
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+form {
+  width: 100%;
+}
+
+.allCoursesForm {
+  position: relative;
+  left: 50%;
+  transform: translate(-35%, 0%);
+}
