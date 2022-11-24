@@ -78,10 +78,7 @@ export default class UserCoursesCurrect extends Component {
               <img src={Magnifier} className="manifierImg" />
             </button>
           </div>
-          <div className="prevNext">
-            <button>P</button>
-            <button>N</button>
-          </div>
+          
         </div>
         <div className="downNav">
           <div className="passedCurrent">

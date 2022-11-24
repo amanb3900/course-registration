@@ -97,10 +97,7 @@ export default class UserCourses extends Component {
               <img src={Magnifier} className="manifierImg" />
             </button>
           </div>
-          <div class="prevNext">
-            <button>P</button>
-            <button>N</button>
-          </div>
+          
         </div>
         <div class="downNav">
           <div class="passedCurrent">
@@ -115,7 +112,7 @@ export default class UserCourses extends Component {
             <thead>
               <tr>
                 <th class="semesterNum" colspan="4">
-                  1. semester: 2017/2018 Fall
+                  1. Semester : 2020-2021 (1ST SEM)
                 </th>
               </tr>
             </thead>
@@ -128,39 +125,39 @@ export default class UserCourses extends Component {
               </tr>
               <tr>
                 <td>CS103</td>
-                <td>Introduction to Programming</td>
-                <td>3 | 6</td>
-                <td>B+</td>
+                <td>Computer Programming</td>
+                <td>3</td>
+                <td>B</td>
               </tr>
               <tr>
-                <td>ELIT100</td>
-                <td>Academic English and Effective Communication</td>
-                <td>3 | 6</td>
-                <td>A-</td>
+                <td>HSS 228</td>
+                <td>TCE</td>
+                <td>3</td>
+                <td>AB</td>
               </tr>
               <tr>
                 <td>MATH101</td>
-                <td>Calculus I</td>
-                <td>3 | 6</td>
-                <td>B-</td>
+                <td>M-1</td>
+                <td>4</td>
+                <td>BC</td>
               </tr>
               <tr>
-                <td>Course Code</td>
-                <td>Understanding Science and Technology</td>
-                <td>1.5 | 3</td>
-                <td>A</td>
+                <td>MECH 110</td>
+                <td>CLP</td>
+                <td>4</td>
+                <td>C</td>
               </tr>
               <tr>
-                <td>Course Code</td>
-                <td>Introduction to Psychology</td>
-                <td>3 | 6</td>
-                <td>C+</td>
+                <td>MECH</td>
+                <td>CLP LAB</td>
+                <td>2</td>
+                <td>BC</td>
               </tr>
               <tr>
-                <td>TURK111</td>
-                <td>Spoken Turkish I</td>
-                <td>1.5 | 3</td>
-                <td>A</td>
+                <td>ECE 101</td>
+                <td>BASIC ELECTRONICS</td>
+                <td>4</td>
+                <td>B</td>
               </tr>
             </tbody>
           </table>
@@ -168,7 +165,7 @@ export default class UserCourses extends Component {
             <thead>
               <tr>
                 <th class="semesterNum" colspan="4">
-                  2. semester: 2017/2018 Spring
+                  2. Semester : 2020-2021 (2ND SEM)
                 </th>
               </tr>
             </thead>
@@ -181,38 +178,38 @@ export default class UserCourses extends Component {
               </tr>
               <tr>
                 <td>CS103</td>
-                <td>Introduction to Programming</td>
-                <td>3 | 6</td>
-                <td>B+</td>
+                <td>IDSA</td>
+                <td>3</td>
+                <td>B</td>
               </tr>
               <tr>
-                <td>ELIT100</td>
-                <td>Academic English and Effective Communication</td>
-                <td>3 | 6</td>
-                <td>A-</td>
+                <td>CS103</td>
+                <td>DSA LAB</td>
+                <td>1</td>
+                <td>BC</td>
               </tr>
               <tr>
                 <td>MATH101</td>
-                <td>Calculus I</td>
-                <td>3 | 6</td>
-                <td>B-</td>
+                <td>M-2</td>
+                <td>4</td>
+                <td>BC</td>
               </tr>
               <tr>
-                <td>Course Code</td>
-                <td>Understanding Science and Technology</td>
-                <td>1.5 | 3</td>
-                <td>A</td>
+                <td>ECE </td>
+                <td>DSY</td>
+                <td>3</td>
+                <td>C</td>
               </tr>
               <tr>
-                <td>Course Code</td>
-                <td>Introduction to Psychology</td>
-                <td>3 | 6</td>
-                <td>C+</td>
+                <td>HSS</td>
+                <td>VEE</td>
+                <td>3</td>
+                <td>BC</td>
               </tr>
               <tr>
-                <td>TURK111</td>
-                <td>Spoken Turkish I</td>
-                <td>1.5 | 3</td>
+                <td>CSE</td>
+                <td>OTA</td>
+                <td>3</td>
                 <td>A</td>
               </tr>
             </tbody>

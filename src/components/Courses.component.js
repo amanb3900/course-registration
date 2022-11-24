@@ -153,10 +153,7 @@ export default class Courses extends Component {
               <img src={Magnifier} className="manifierImg" />
             </button>
           </div>
-          <div className="prevNext">
-            <button> P </button>
-            <button> N </button>
-          </div>
+          
         </div>
         <div className="addCoursesDownNav">
           <div className="typeOfCourses">

@@ -25,7 +25,7 @@ export default class Home extends Component {
             <div class="card">
               <div class="event">
                 <div class="event-desc">
-                  SE308.1 Communication Systems and Networks
+                  CSE308.1 Computer Networks
                   <br />A F2.3
                 </div>
                 <div class="event-time">9:00 to 10:50</div>
